@@ -1,0 +1,45 @@
+{
+  "name": "eslint-plugin-node-imports",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Martin Buchalik",
+  "description": "An ESLint plugin that contains a rule to prevent imports from Node.js core modules",
+  "keywords": [
+    "eslint",
+    "eslint-plugin"
+  ],
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rimraf dist/",
+    "build": "npm run clean && npm run build-without-rm",
+    "build-without-rm": "tsc",
+    "lint": "eslint . --max-warnings=0 && npm run lint-additional-files",
+    "lint-additional-files": "prettier --check **/*.{md,json,yml}",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MBuchalik/eslint-plugin-node-imports.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MBuchalik/eslint-plugin-node-imports/issues"
+  },
+  "homepage": "https://github.com/MBuchalik/eslint-plugin-node-imports#readme",
+  "devDependencies": {
+    "@types/eslint": "^8.4.10",
+    "@types/jest": "^29.2.5",
+    "eslint": "^8.32.0",
+    "eslint-config-mbuchalik": "^1.0.0",
+    "jest": "^29.3.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "peerDependencies": {
+    "eslint": "^8.0.0"
+  }
+}
