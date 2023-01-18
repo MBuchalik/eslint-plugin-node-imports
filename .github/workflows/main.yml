@@ -76,6 +76,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Build the project
+        run: npm run build
+
       - name: Publish the package
         run: npm publish
         env:
