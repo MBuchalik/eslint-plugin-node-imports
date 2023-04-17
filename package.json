@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-node-imports",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Martin Buchalik",
   "description": "An ESLint plugin that contains a rule to prevent imports from Node.js core modules",
